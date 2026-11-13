@@ -104,9 +104,40 @@ Lỗi nào chỉ lượt 2 (theo cảnh) mới thấy, lượt 1 (theo người)
 | Job đã completed trên CVAT máy cá nhân | Xác nhận |
 
 Dán phần tóm tắt in ra từ `src/check_submission.py`:
+Số frame in theo CVAT (bắt đầu từ 0). Trong gt.txt, frame_id = frame CVAT + 1.
 
+=== File MOT 1.1: TranDucHoa_mot.zip ===
+  Số track ID: 5   |   Tổng số box: 612
+  [OK]        Đúng 5 track ID.
+
+  Track | Frame có mặt | Số frame | Đoạn vắng (outside)
+      1 |   0–149      |      150 | -
+      2 |   0–149      |      132 | 36–53
+      3 |   0–144      |      117 | 110–137
+      4 |   2–104      |      103 | -
+      5 |  40–149      |      110 | -
+
+
+=== File CVAT for video 1.1: TranDucHoa_cvat_video.zip ===
+
+  Track | Nhãn   | Frame thấy | Keyframe | KF/100 frame | Frame occluded | Lần bật outside
+      0 | person |        150 |       30 |         20.0 |              0 |               0
+              Track 0: keyframe ở frame [0, 10, 20, 30, 40, 50, 60, 63, 64, 67, 70, 75, 80, 84, 90, 92, 100, 102, 103, 110, 120, 121, 122, 124, 126, 130, 133, 140, 144, 149]
+      1 | person |        132 |       33 |         25.0 |             23 |               1
+              Track 1: keyframe ở frame [0, 10, 20, 26, 30, 54, 55, 60, 62, 64, 70, 72, 73, 74, 75, 76, 77, 80, 88, 89, 90, 91, 99, 100, 102, 110, 111, 120, 130, 140, 142, 145, 149]
+      2 | person |        117 |       13 |         11.1 |             10 |               2
+              Track 2: keyframe ở frame [0, 10, 20, 30, 40, 50, 60, 100, 106, 138, 140, 141, 142]
+      3 | person |        103 |        9 |          8.7 |             16 |               1
+              Track 3: keyframe ở frame [2, 10, 20, 30, 40, 50, 60, 89, 100]
+      4 | person |        110 |       16 |         14.5 |              0 |               0
+              Track 4: keyframe ở frame [40, 50, 53, 54, 60, 70, 80, 90, 93, 100, 110, 120, 124, 129, 130, 149]
+
+  Tổng: 101 keyframe / 612 frame có mặt = 16.5 keyframe / 100 frame
+  [OK]        Đọc được 5 track từ annotations.xml.
+
+=== Tóm tắt ===
   Lỗi: 0   |   Cảnh báo: 0
-  Đạt. Dán phần tóm tắt này vào báo cáo mục 5.
+  Đạt.
 
 ## 6. Ba câu kết
 
